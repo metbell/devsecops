@@ -1,13 +1,15 @@
 ---
-- name: Deploy Numeric App
-  hosts: all
-  gather_facts: false
+# - name: Deploy Numeric App
+#   hosts: all
+#   gather_facts: false
 
-  tasks:
-    - name: Apply Deployment
-      kubernetes.core.k8s:
-        kubeconfig: "{{ lookup('file', 'config') }}"
-        definition: "{{ lookup('file', 'k8s_PROD-deployment_service.yaml') }}"
-        state: present
+#   tasks:
+#     - name: Apply Deployment
+#       kubernetes.core.k8s:
+#         kubeconfig: "{{ lookup('file', 'config') }}"
+#         definition: "{{ lookup('file', 'k8s_PROD-deployment_service.yaml') }}"
+#         state: present
 
-  
+- name: This command will change the working directory to somedir/
+  ansible.builtin.shell:
+    cmd: kubectl apply -f dep.yml
