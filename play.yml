@@ -1,0 +1,13 @@
+---
+- name: Deploy Numeric App
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Apply Deployment
+      k8s:
+        kubeconfig: "{{ lookup('file', '/root/.kube/config') }}"
+        definition: "{{ lookup('file', 'k8s_PROD-deployment_service.yaml') }}"
+        state: present
+
+  
