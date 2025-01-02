@@ -180,7 +180,7 @@ pipeline {
     //   }
     // }
 
-    stage('Run ansible playbook'){
+    stage('Run ansible playbook for deployment'){
       steps{
         echo 'Running ansible playbook for kube deployments'
         sh '''

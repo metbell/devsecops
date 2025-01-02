@@ -5,7 +5,7 @@
 
   tasks:
     - name: Apply Deployment
-      k8s:
+      kubernetes.core.k8s:
         kubeconfig: "{{ lookup('file', '/root/.kube/config') }}"
         definition: "{{ lookup('file', 'k8s_PROD-deployment_service.yaml') }}"
         state: present
