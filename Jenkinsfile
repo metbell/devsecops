@@ -9,7 +9,7 @@ pipeline {
     serviceName = "devsecops-svc"
     imageName = "metbell/devrepo:${GIT_COMMIT}"
     applicationURI="/increment/99"
-    kubeconfig="/root/.kube"
+    kubeconfig="/root/.kube/config"
     ansible_playbook="playbook.yaml"
   }
 
