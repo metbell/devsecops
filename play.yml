@@ -12,4 +12,4 @@
 
 - name: This command will change the working directory to somedir/
   ansible.builtin.shell:
-    cmd: kubectl apply -f dep.yml
+    cmd: kubectl apply -f deploy.yml
