@@ -183,7 +183,7 @@ pipeline {
     stage('Run ansible playbook'){
       steps{
         echo 'Running ansible playbook for kube deployments'
-        ansible-playbook ${ansible_playbook}
+        ansible-playbook play.yml
       }
     }
 
