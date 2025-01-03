@@ -10,6 +10,6 @@
 #         definition: "{{ lookup('file', 'k8s_PROD-deployment_service.yaml') }}"
 #         state: present
 
-- name: This command will change the working directory to somedir/
-  ansible.builtin.shell:
-    cmd: kubectl apply -f dep.yml
+- name: deploy the yaml file
+  ansible.builtin.shell: kubectl apply -f dep.yml
+    
