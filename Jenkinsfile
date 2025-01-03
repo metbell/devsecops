@@ -184,8 +184,7 @@ pipeline {
       steps{
         echo 'Running ansible playbook for kube deployments'
         sh '''
-        cd /root
-        ansible-playbook dep.yml
+        ansible-playbook play.yml
         '''
       }
     }
