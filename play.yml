@@ -1,7 +1,7 @@
 ---
 - name: Deploy Numeric App
   hosts: all
-  gather_facts: false
+  gather_facts: true
 
   tasks:
     # - name: Apply Deployment
