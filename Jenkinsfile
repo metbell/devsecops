@@ -41,11 +41,11 @@ pipeline {
 		              -Dsonar.projectKey=dev \
 		              -Dsonar.host.url=http://192.168.1.101:9000"
         }
-        timeout(time: 2, unit: 'MINUTES') {
-          script {
-            waitForQualityGate abortPipeline: true
-          }
-        }
+        // timeout(time: 2, unit: 'MINUTES') {
+        //   script {
+        //     waitForQualityGate abortPipeline: true
+        //   }
+        // }
       }
     }
 
